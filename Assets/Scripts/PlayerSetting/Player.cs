@@ -8,6 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Player : MonoBehaviour
 {
     public static Player instance;
+    public AudioSource m_asButtonPress;
 
     [SerializeField] private XRNode playerMoveDevice;       //어떠한 기기로 이동할지 정하는 변수
 
@@ -48,8 +49,8 @@ public class Player : MonoBehaviour
 
         if (!moveImpossible)
         {
-            StartMove();
         }
+        StartMove();
         ApplyGravity();
     }
 
@@ -80,5 +81,9 @@ public class Player : MonoBehaviour
         gravity.y *= Time.deltaTime;
         characterController.Move(gravity * Time.deltaTime);
     }
+
+
+
+
 }
 
