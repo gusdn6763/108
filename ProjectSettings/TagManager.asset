@@ -7,11 +7,13 @@ TagManager:
   - Right
   - Left
   - Button
+  - Portal Ignore
+  - Slime
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Slime
   - Water
   - UI
   - 

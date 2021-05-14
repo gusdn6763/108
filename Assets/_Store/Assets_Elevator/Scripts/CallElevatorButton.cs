@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CallElevatorButton : MonoBehaviour
+public class CallElevatorButton : MonoBehaviour, IPress
 {
     public ElevatorControl elevator;
 
@@ -57,7 +57,7 @@ public class CallElevatorButton : MonoBehaviour
         closeDoorTime = Time.time + openDelay;
     }
 
-    public void PressButon()
+    public void PressButton()
     {
         if ( bEnabled == false )
         {

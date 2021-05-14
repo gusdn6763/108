@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FloorButtonTrigger : MonoBehaviour
+public class FloorButtonTrigger : MonoBehaviour, IPress
 {
     public ElevatorControl elevator;
 
@@ -21,7 +21,7 @@ public class FloorButtonTrigger : MonoBehaviour
 	
 	}
 
-    public void PressButon()
+    public void PressButton()
     {
         if ( bEnabled == false )
         {

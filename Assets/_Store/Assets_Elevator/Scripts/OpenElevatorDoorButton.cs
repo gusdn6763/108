@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OpenElevatorDoorButton : MonoBehaviour
+public class OpenElevatorDoorButton : MonoBehaviour, IPress
 {
 
     public ElevatorControl elevator;
@@ -48,4 +48,6 @@ public class OpenElevatorDoorButton : MonoBehaviour
     {
         psGlow.enableEmission = false;
     }
+
+
 }

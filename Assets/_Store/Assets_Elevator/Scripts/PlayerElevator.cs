@@ -27,10 +27,10 @@ public class PlayerElevator : MonoBehaviour
                 CloseElevatorDoorButton button4 = hit.transform.GetComponent<CloseElevatorDoorButton>();
 
                 if ( button != null )
-                   button.PressButon();
+                   button.PressButton();
 
                 if ( button2 != null )                
-                    button2.PressButon();
+                    button2.PressButton();
 
                 if ( button3 != null )
                     button3.PressButton();
