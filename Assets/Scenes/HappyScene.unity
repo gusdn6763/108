@@ -6110,13 +6110,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004242275}
-  m_LocalRotation: {x: 0.20852707, y: -0.7480832, z: 0.45609963, w: 0.43458155}
-  m_LocalPosition: {x: 0.20000005, y: 0, z: 0.19}
+  m_LocalRotation: {x: 0.13673174, y: -0.8139894, z: 0.2714465, w: 0.49501774}
+  m_LocalPosition: {x: 0.223, y: 0, z: 0.156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1730188033}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 59.728, y: -114.148, z: 9.642}
+  m_LocalEulerAnglesHint: {x: 35.259, y: -116.36, z: 3.24}
 --- !u!102 &1004242277
 TextMesh:
   serializedVersion: 3
@@ -16723,7 +16723,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e9ea7d7be8faa4f43aaf376e35ea56fd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -21779,8 +21779,10 @@ GameObject:
   - component: {fileID: 1995899538}
   - component: {fileID: 1995899537}
   - component: {fileID: 1995899536}
+  - component: {fileID: 1995899539}
+  - component: {fileID: 1995899540}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: FoodQuad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21793,13 +21795,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995899534}
-  m_LocalRotation: {x: 0, y: 0.6157302, z: 0, w: 0.7879571}
-  m_LocalPosition: {x: -0.67, y: 0.26, z: 0}
+  m_LocalRotation: {x: -0, y: 0.5589545, z: -0, w: 0.8291984}
+  m_LocalPosition: {x: -0.454, y: 0.675, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1730188033}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 76.01, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 67.967, z: 0}
 --- !u!64 &1995899536
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21863,6 +21865,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995899534}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1995899539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995899534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4e38a76564a4340b6afafec2a9b463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!328 &1995899540
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995899534}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 106fcb95d7492334186d5a9b836013a9, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 0
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1001 &4585676562790733216
 PrefabInstance:
   m_ObjectHideFlags: 0
