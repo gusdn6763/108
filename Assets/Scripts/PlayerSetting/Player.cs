@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public float additionalHeight = 0.2f;                       //추가적인 머리 크기
     public bool moveImpossible = false;                         //플레이어 이동을 금지
     public float speed;                                         //플레이어 속도
+    public GameObject isGrabItem;
 
     private void Awake()
     {

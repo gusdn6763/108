@@ -370,8 +370,7 @@ public class Portal : MonoBehaviour
 
         CameraExtensions.LayerCullingShow(portalCamera, ToDimension().layer);
         CameraExtensions.LayerCullingShowMask(portalCamera, alwaysVisibleMask);
-        print(mainCamera.gameObject.name);
-        print(mainCamera.fieldOfView);
+
 
         // Update values that are used to generate the Skybox and whatnot.
         portalCamera.farClipPlane = mainCamera.farClipPlane;

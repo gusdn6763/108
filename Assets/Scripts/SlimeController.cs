@@ -57,7 +57,8 @@ public class SlimeController : MonoBehaviour
     {
         while(true)
         {
-            transform.LookAt(Player.instance.transform);
+            Vector3 targetPosition = new Vector3(Player.instance.transform.position.x, transform.position.y, Player.instance.transform.position.z);
+            transform.LookAt(targetPosition);
             switch (slimeStatus)
             {
                 case SlimeStatus.Idle:
