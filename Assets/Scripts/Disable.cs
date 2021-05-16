@@ -14,7 +14,7 @@ public class Disable : MonoBehaviour
             mesh.enabled = false;
             for(int i = 0; i < spawnPoint.Length; i++)
             {
-                slime = Instantiate(slime, spawnPoint[i].position, spawnPoint[i].rotation).GetComponent<SlimeController>();
+                 Instantiate(slime, spawnPoint[i].position, spawnPoint[i].rotation).GetComponent<SlimeController>();
             }
         }
     }
