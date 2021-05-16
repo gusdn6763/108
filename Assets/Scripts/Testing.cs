@@ -11,7 +11,7 @@ public class Testing : XRBaseInteractable
     }
     protected override void OnHoverEntered(HoverEnterEventArgs args)
     {
-        GetComponent<IPress>().PressButon();
+        GetComponent<IPress>().PressButton();
         base.OnHoverEntered(args);
     }
     protected override void OnHoverExited(HoverExitEventArgs args)
