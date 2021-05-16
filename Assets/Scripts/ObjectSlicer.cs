@@ -13,17 +13,15 @@ public class ObjectSlicer : MonoBehaviour
     public VelocityEstimator velocityEstimator;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
     {
         RaycastHit hit;
         Vector3 slicingDirection = endSlicingPoint.position - startSlicingPoint.position;
-        bool hasHit = Physics.Raycast(startSlicingPoint.position, slicingDirection, out hit, slicingDirection.magnitude + 0.5f, sliceableLayer);
+        bool hasHit = Physics.Raycast(startSlicingPoint.position, slicingDirection, out hit, slicingDirection.magnitude, sliceableLayer);
+        print(hasHit);
         if (hasHit)
         {
             Slice(hit.transform.gameObject, hit.point, velocityEstimator.GetVelocityEstimate());      

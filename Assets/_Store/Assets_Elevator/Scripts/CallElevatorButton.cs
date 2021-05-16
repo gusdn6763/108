@@ -23,8 +23,6 @@ public class CallElevatorButton : MonoBehaviour, IPress
 
         psGlow = GetComponent<ParticleSystem>();
         DisableLight();
-        
-        
 	}
 	
 	void Update ()

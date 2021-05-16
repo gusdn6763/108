@@ -5,21 +5,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Testing2 : XRBaseInteractable
 {
-    private FloorButtonTrigger test;
+    [SerializeField] private Transform trans;
 
-    protected override void Awake()
+    private void Update()
     {
-        base.Awake();
-        test = GetComponent<FloorButtonTrigger>();
-    }
-    protected override void OnHoverEntered(HoverEnterEventArgs args)
-    {
-        print("aa");
-        test.PressButton();
-        base.OnHoverEntered(args);
-    }
-    protected override void OnHoverExited(HoverExitEventArgs args)
-    {
-        base.OnHoverExited(args);
+        transform.position = trans.position;
     }
 }
