@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0e5acd90747364aa6eb56903baf3c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  can: {fileID: 0}
-  text: {fileID: 0}
+  can: {fileID: 6883745231961189525}
+  text: {fileID: 4315568441713024005}
   player: {fileID: 0}
   slimeStatus: 0
   attackDist: 0.5

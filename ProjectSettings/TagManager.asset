@@ -10,6 +10,7 @@ TagManager:
   - Portal Ignore
   - Slime
   - Weapon
+  - ErrorSlime
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Slime
   - Water
   - UI
-  - 
+  - People
   - 
   - 
   - 
