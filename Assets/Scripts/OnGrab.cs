@@ -12,11 +12,11 @@ public class OnGrab : XRGrabInteractable
             base.OnSelectEntered(args);
     }
 
-    protected override void OnHoverExited(HoverExitEventArgs args)
+    protected override void OnSelectExited(SelectExitEventArgs args)
     {
         GetComponent<BoxCollider>().isTrigger = false;
         Player.instance.isGrabItem = null;
-        base.OnHoverExited(args);
+        base.OnSelectExited(args);
     }
 
 

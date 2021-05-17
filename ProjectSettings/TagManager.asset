@@ -11,6 +11,7 @@ TagManager:
   - Slime
   - Weapon
   - ErrorSlime
+  - Touch
   layers:
   - Default
   - TransparentFX
