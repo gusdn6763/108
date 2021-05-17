@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum SlimeStatus
 {
@@ -11,21 +12,25 @@ public enum SlimeStatus
 
 public class SlimeController : MonoBehaviour
 {
+    [SerializeField] private Canvas can;
+    [SerializeField] private Text text;
     private AudioSource audiod;
     private Animator animator;
     public Transform player;
-    public SlimeStatus slimeStatus = SlimeStatus.Idle;
+    public SlimeStatus slimeStatus = SlimeStatus.Move;
     //test
     public float attackDist;
     public float speed;
     public bool isAttack = false;
-    public Coroutine slimeCoroutine;
+    public bool check = false;
 
     private void Awake()
     {
-        player = Player.instance.transform;
         animator = GetComponent<Animator>();
         audiod = GetComponent<AudioSource>();
+        player = Player.instance.transform;
+        can.renderMode = RenderMode.WorldSpace;
+        can.worldCamera = Camera.main;
     }
 
     private void Start()
@@ -55,15 +60,12 @@ public class SlimeController : MonoBehaviour
 
     IEnumerator SlimeAction()
     {
-        while(true)
+        while (true)
         {
             Vector3 targetPosition = new Vector3(Player.instance.transform.position.x, transform.position.y, Player.instance.transform.position.z);
             transform.LookAt(targetPosition);
             switch (slimeStatus)
             {
-                case SlimeStatus.Idle:
-                    break;
-
                 case SlimeStatus.Move:
                     transform.Translate(Vector3.forward * speed * Time.deltaTime);
                     animator.SetBool("Move", true);
@@ -85,5 +87,14 @@ public class SlimeController : MonoBehaviour
     public void AttackSound()
     {
         audiod.Play();
+    }
+
+    public void Show()
+    {
+        if (check)
+        {
+            text.color = new Color(255, 0, 0, 255);
+            Destroy(this.gameObject, 3f);
+        }
     }
 }

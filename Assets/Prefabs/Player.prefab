@@ -497,11 +497,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36b70ae87d7c184f85dc84160f281b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_asButtonPress: {fileID: 0}
   playerMoveDevice: 4
   mass: 0
   additionalHeight: 0.2
   moveImpossible: 0
   speed: 0
+  isGrabItem: {fileID: 0}
 --- !u!1 &2447795618799410278
 GameObject:
   m_ObjectHideFlags: 0

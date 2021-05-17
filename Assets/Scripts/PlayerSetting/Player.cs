@@ -50,9 +50,9 @@ public class Player : MonoBehaviour
 
         if (!moveImpossible)
         {
+            StartMove();
+            ApplyGravity();
         }
-        StartMove();
-        ApplyGravity();
     }
 
     /// <summary>
