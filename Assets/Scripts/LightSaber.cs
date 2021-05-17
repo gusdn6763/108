@@ -6,6 +6,7 @@ public class LightSaber : MonoBehaviour
 {
     public AudioClip beamAudio;
     [SerializeField] private ObjectSlicer objectSlicer;
+    [SerializeField] private Animator animatorPeople;
 
     private AudioSource audioSource;
     private Animator animator;
@@ -20,6 +21,7 @@ public class LightSaber : MonoBehaviour
 
     public void TriggerBeam()
     {
+        animatorPeople.SetBool("Action", true);
         isOn = animator.GetBool("LightSaberOn");
         if (!isOn)
         {

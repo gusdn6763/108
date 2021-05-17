@@ -4,15 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-
   - Right
   - Left
   - Button
   - Portal Ignore
   - Slime
-  - Grab
-  - Heart
-
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -20,10 +17,9 @@ TagManager:
   - Slime
   - Water
   - UI
-  - Player
-  - Wall
-  - grabbable
-
+  - 
+  - 
+  - 
   - 
   - 
   - 
