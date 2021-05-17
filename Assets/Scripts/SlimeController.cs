@@ -26,11 +26,11 @@ public class SlimeController : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        audiod = GetComponent<AudioSource>();
         player = Player.instance.transform;
         can.renderMode = RenderMode.WorldSpace;
         can.worldCamera = Camera.main;
-        animator = GetComponent<Animator>();
-        audiod = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -60,7 +60,7 @@ public class SlimeController : MonoBehaviour
 
     IEnumerator SlimeAction()
     {
-        while(true)
+        while (true)
         {
             Vector3 targetPosition = new Vector3(Player.instance.transform.position.x, transform.position.y, Player.instance.transform.position.z);
             transform.LookAt(targetPosition);
@@ -88,16 +88,13 @@ public class SlimeController : MonoBehaviour
     {
         audiod.Play();
     }
-    private void OnTriggerEnter(Collider other)
+
+    public void Show()
     {
-        if(check)
+        if (check)
         {
-            if(other.CompareTag("Weapon"))
-            {
-                print("ºÎ¼­Áü");
-                text.color= new Color(255, 0, 0, 255);
-                Destroy(this.gameObject, 3f);
-            }
+            text.color = new Color(255, 0, 0, 255);
+            Destroy(this.gameObject, 3f);
         }
     }
 }

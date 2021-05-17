@@ -10,7 +10,8 @@ public class LightSaber : MonoBehaviour
 
     private AudioSource audioSource;
     private Animator animator;
-    private bool isOn = false;
+    public bool isOn = false;
+    private bool oneCheck = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,11 @@ public class LightSaber : MonoBehaviour
 
     public void TriggerBeam()
     {
-        animatorPeople.SetBool("Action", true);
+        if (!oneCheck)
+        {
+            animatorPeople.SetBool("Action", true);
+            oneCheck = true;
+        }
         isOn = animator.GetBool("LightSaberOn");
         if (!isOn)
         {
@@ -34,4 +39,6 @@ public class LightSaber : MonoBehaviour
         objectSlicer.enabled = !isOn;
         animator.SetBool("LightSaberOn", !isOn);
     }
+
+
 }
