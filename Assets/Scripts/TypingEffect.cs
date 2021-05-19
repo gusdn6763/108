@@ -9,10 +9,9 @@ public class TypingEffect : MonoBehaviour
     private string m_txt = "H A P P Y F L O O R";
     void Start()
     {
-        StartCoroutine(typing());
     }
 
-    IEnumerator typing()
+    public IEnumerator typing()
     {
         yield return new WaitForSeconds(1f);
 

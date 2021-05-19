@@ -6,10 +6,9 @@ public class OnGrab : XRGrabInteractable
 {
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-
-            GetComponent<BoxCollider>().isTrigger = true;
-            Player.instance.isGrabItem = this.gameObject;
-            base.OnSelectEntered(args);
+        GetComponent<BoxCollider>().isTrigger = true;
+        Player.instance.isGrabItem = this.gameObject;
+        base.OnSelectEntered(args);
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)

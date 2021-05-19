@@ -25,7 +25,7 @@ public class Enable : MonoBehaviour
     public IEnumerator PlayerMove()
     {
         int i = 0;
-        while (Player.instance.moveImpossible)
+        while (Player.instance.moveImpossible && points.Length != i)
         {
             Player.instance.transform.position = Vector3.MoveTowards(Player.instance.transform.position, points[i].position, speed * Time.deltaTime);
             if (Vector3.Distance(Player.instance.transform.position, points[i].position) <= 1f)

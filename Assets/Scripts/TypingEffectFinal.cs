@@ -9,10 +9,9 @@ public class TypingEffectFinal : MonoBehaviour
     private string m_txt = "지금....\n\n당신의 감정은\n\n어떤가요?";
     void Start()
     {
-        StartCoroutine(typing());
     }
 
-    IEnumerator typing()
+    public IEnumerator typing()
     {
         yield return new WaitForSeconds(1f);
 

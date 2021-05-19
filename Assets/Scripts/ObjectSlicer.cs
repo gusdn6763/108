@@ -12,6 +12,7 @@ public class ObjectSlicer : MonoBehaviour
     public Transform endSlicingPoint;
     public LayerMask sliceableLayer;
     public VelocityEstimator velocityEstimator;
+    public AudioSource audioss;
 
     // Start is called before the first frame update
     private void Awake()
@@ -68,6 +69,7 @@ public class ObjectSlicer : MonoBehaviour
 
     void SlicePeople(GameObject target, Vector3 planePosition, Vector3 slicerVelocity)
     {
+        audioss.Play();
         Debug.Log("WE SLICE THE OBJECT");
         Vector3 slicingDirection = endSlicingPoint.position - startSlicingPoint.position;
         Vector3 planeNormal = Vector3.Cross(slicerVelocity, slicingDirection);
